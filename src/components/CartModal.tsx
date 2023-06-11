@@ -3,7 +3,11 @@ import { CartItem } from '../types';
 import ButtonQuantity from './ButtonQuantity';
 import { CartContext } from '../contexts/cart';
 
-function CartModal() {
+interface CartProps {
+    isOpen: boolean;
+}
+
+function CartModal({ isOpen }: CartProps) {
     const { state, removeToCart, clearCart } = useContext(CartContext);
 
     const deleteItemCart = (cartItem: CartItem) => {
@@ -21,7 +25,9 @@ function CartModal() {
     return (
         <div
             id="cart"
-            className="absolute flex justify-center right-0 top-0 h-screen w-[700px] p-7 bg-white z-50"
+            className={`fixed flex justify-center right-0 top-0 h-screen w-[700px] p-7 bg-white z-50 ease-in-out duration-300 ${
+                isOpen ? 'translate-x-0' : 'translate-x-full'
+            }`}
         >
             {state.cart.length === 0 ? (
                 <h1 className="font-semibold text-2xl">

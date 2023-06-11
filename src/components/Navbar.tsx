@@ -178,7 +178,7 @@ function Navbar() {
                     </div>
                 </div>
             </section>
-            {isOpen && createPortal(<CartModal />, document.body)}
+            {createPortal(<CartModal isOpen={isOpen} />, document.body)}
         </nav>
     );
 }
