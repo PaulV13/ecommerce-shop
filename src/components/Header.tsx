@@ -1,7 +1,7 @@
 import Filters from './Filters';
 
 function Header() {
-    return <Filters />;
+	return <Filters />;
 }
 
 export default Header;

@@ -1,8 +1,12 @@
 {
-    "trailingComma": "none",
-    "tabWidth": 4,
-    "semi": true,
-    "singleQuote": true,
-    "bracketSpacing": true,
-    "arrowParens": "avoid"
+	"useTabs": true,
+	"singleQuote": true,
+	"jsxSingleQuote": true,
+	"trailingComma": "none",
+	"semi": true,
+	"bracketSpacing": true,
+	"arrowParens": "avoid",
+	"tailwindConfig": "./tailwind.config.js",
+	"plugins": ["prettier-plugin-tailwindcss"],
+	"pluginSearchDirs": false
 }
